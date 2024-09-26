@@ -1,0 +1,14 @@
+**Some Basic Terminology**
+True Positive Rate( Sensitivity or Recall): TPR=TP/TP+FN is a ratio identifying what percentage of Positive hits a model generates are accurate. 
+A high TPR is beneficial. 
+
+Type 1 Error: A type 1 error occurs when the null hypothesis is incorrectly rejected leading to a loss e.g. a placebo effect incorrectly identifies a new
+medication as effective. It is particularly important when the cost of a positive outcome is high e.g. necessary medical treatment. T1 Error is related 
+
+False positive Rate: FPR = FP/TP+TN. 
+
+Type 2 Error: A type 2 error occurs when a model fails to indentify cases where we should reject the null hypothesis relating it to False Negatives. This indicated a deficiency in the models ability correctly identify positive cases. To borrow from medicine again, this is akin to a XRay scanner that misses the positive sign of cancer. In this instance the 'low probability' is the prospect of a patient having cancer so we set up H0: There is no incident of Cancer, H1: the patient has cancer. In this case the model needs to err on the side of caution. 
+
+ROC AUC (Receiver Operating Characteristic - Area Under the Curve): This is a method for evaluating the performance of a binary classification model. Balances the True Positive Rate and False Positive Rate 
+probabilities to create a measure that is generally more appropriate for highly imbalanced data-sets. The balance of TPR and FPR into one metric can provide a more balanced view of the characteristics of a dataset.
+
