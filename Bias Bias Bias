@@ -1,7 +1,31 @@
 **Sampling methods for biased datasets**
 
-SMOTE
+SMOTE (Synthetic Minority Over-sampling Technique):
+SMOTE is a technique to handle class imbalance by generating synthetic samples for minority classes, interpolating between existing data points rather than duplicating them. This approach maintains diversity in the data while addressing imbalance, helping models learn patterns in underrepresented classes more effectively
 
-roBERTa
+roBERTa (Robustly Optimized BERT Approach):
+RoBERTa, an improved version of the BERT model, is useful in handling biased datasets for NLP tasks. Fine-tuning RoBERTa leverages its deep linguistic understanding, helping models recognize subtle patterns in minority classes. This transfer learning approach can reduce dataset-specific bias, improving performance on imbalanced text data.
 
-V-fold cross validation
+V-fold cross validation:
+V-fold cross-validation provides a model evaluation by splitting data into V subsets, rotating each subset as the test set while training on the rest. For biased datasets, V-fold cross-validation offers a fair performance assessment, as it exposes the model to varied data distributions, reducing the risk of overfitting to majority classes and enhancing overall model generlisability.
+
+Stratified sampling:
+Stratified sampling is a technique used to ensure that all classes are represented proportionally in your dataset if there is imbalance. Instead of randomly selecting data points, the dataset is divided into "strata" (groups) based on class labels, and samples are drawn from each group according to its maintaining representation from the full dataset. This approach preserves the original distribution, making it more useful for imbalanced datasets, as it helps prevent majority classes from dominating the sample, leading to more balanced model training.
+
+Stratified V-fold cross validation:
+Stratified V-fold cross-validation extends regular V-fold cross-validation by maintaining class proportions within each fold. Each fold contains a similar distribution of classes as the original dataset, ensuring that both training and test sets are representative of the class imbalance. This method is particularly effective for biased datasets, as it provides a more accurate performance assessment across underrepresented classes, improving the model's reliability and generalization.
+
+Oversampling and Undersampling:
+Oversampling involves duplicating instances from the minority class to balance class distribution, while undersampling reduces the size of the majority class by removing some instances. These methods can be used independently or in combination with other techniques, helping models train on a balanced dataset without requiring synthetic data. However, they need careful application to avoid overfitting, data loss, or destroying underlying attributes of the dataset.
+
+Synthetic Minority Over-sampling Technique with Edited Nearest Neighbors (SMOTE-ENN):
+SMOTE-ENN is a hybrid technique that combines SMOTE with Edited Nearest Neighbors (ENN). After generating synthetic minority samples using SMOTE, ENN removes data points that are likely to be noise or outliers based on nearest-neighbor algorithms. This approach enhances class balance while cleaning the dataset, reducing noise for more effective training on minority classes.
+
+Cost-Sensitive Learning:
+Cost-sensitive learning integrates class imbalance into the model by assigning higher penalties for misclassifying minority classes. Rather than balancing data, the model learns to "focus" on the minority class, making it particularly useful in cases where oversampling or synthetic data is undesirable. This approach is typically applied in fields like medical diagnostics or fraud detection, where minority class predictions are crucial e.g. the risk of a false negative can be fatal.
+
+Bootstrap Aggregating (Bagging):
+Bagging required you to creatd multiple balanced datasets by sampling with replacement and training a model on each subset. The final prediction is then averaged across these models. Bagging helps reduce bias, and with balanced subsets, it can perform well on minority classes. This technique is commonly used with ensemble methods, like random forests, to improve performance on imbalanced data.
+
+Balanced Random Forests:
+A change on the standard random forests approach, balanced random forests create balanced subsets by undersampling majority classes within each tree. This method combines random forests with stratified sampling, improving model performance on minority classes while maintaining robustness to 'noisy' data. 
