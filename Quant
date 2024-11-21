@@ -1,9 +1,5 @@
 **Stochastic processes**
 
-*Drift:*
-
-*Diffusion:*
-
 *Independent and stationary increments:* 
 
 The values of the increments of a stochastic process X2-X1, X4-X3 are independent for disjoint time periods [t1,t2] [t3,t4] 
