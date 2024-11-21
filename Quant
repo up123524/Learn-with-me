@@ -1,6 +1,10 @@
 **Stochastic processes**
 
-Independent and stationary increments: 
+*Drift:*
+
+*Diffusion:*
+
+*Independent and stationary increments:* 
 
 The values of the increments of a stochastic process X2-X1, X4-X3 are independent for disjoint time periods [t1,t2] [t3,t4] 
 
@@ -11,4 +15,13 @@ with the overall time scheme.
 
 Analogous to indentically distributed R.V's we consider a stochastic process (e.g. Poisson process) to have this property.
 
-Martingales: 
+*Martingales:* 
+
+A martingale is a key concept in quant finance and represents a process who's expected value is invariant under time. The expected future value is equal to the expected current value. 
+More formally:
+For a stochastic process ${X_t:t \geq 0}$ is a martingale with respect to filtration ${\mathscr{F}_t}$ (the set of information available until time $t$) if:
+1. $X_t$ is adapted to filtration ${\mathscr{F}_t}$ (only depends on this information set)
+2. $E(X_t) < \infty$ (finite expected value)
+3. (The most crucial) $E(X_{t+s}|\mathscr{F}_t})=X_t$ for $s /geq 0$
+It can be thought as analogous to a fair-game e.g. a coin toss where the value of heads is +1 and tails -1.
+This suggests that the underlying process has no drift. 
