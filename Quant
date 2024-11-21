@@ -1,0 +1,14 @@
+**Stochastic processes**
+
+Independent and stationary increments: 
+
+The values of the increments of a stochastic process X2-X1, X4-X3 are independent for disjoint time periods [t1,t2] [t3,t4] 
+
+Analogous to independant R.V's we consider a stochastic process (e.g. Brownian Motion) to have this property. 
+
+Stationary increments imply that the distribution of any given increment relies on the time length of the interval, not on the location of the interval. 
+with the overall time scheme. 
+
+Analogous to indentically distributed R.V's we consider a stochastic process (e.g. Poisson process) to have this property.
+
+Martingales: 
