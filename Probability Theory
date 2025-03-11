@@ -1,0 +1,9 @@
+%%
+**Probability Integral Transform:**
+For a continuous R.V X with a CDF F_X(x) the variable U=F_X(X) follows a uniform distribution [0,1] where 
+U ~ U(0,1). 
+
+Alternatively, as commonly seen for Monte- Carlo simulations, the inverse transform X=F_{X}^-1(U) can be used 
+to obtain your desired distribution from a uniform random variable. 
+%%
+
